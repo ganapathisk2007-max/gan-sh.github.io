@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@400;600&display=swap');
+
+/* ================================
+   Simple Stylesheet
+   ================================ */
 
 /* Reset & Base */
 *, *::before, *::after {
@@ -7,7 +12,8 @@
 }
 
 :root {
-  --bg: #111110;
+  --bg-from: #1a1a2e;
+  --bg-to: #0f2027;
   --surface: #1c1c1a;
   --border: #2e2e2b;
   --text: #e8e6e0;
@@ -25,20 +31,24 @@ html {
 }
 
 body {
-  background-color: var(--bg);
+  background: linear-gradient(135deg, var(--bg-from), var(--bg-to));
+  background-attachment: fixed;
   color: var(--text);
-  font-family: var(--font);
+  font-family: 'Sofia Sans', sans-serif;
   line-height: 1.7;
   max-width: 680px;
   margin: 0 auto;
   padding: 3rem 1.5rem;
+  text-align: center;
+  min-height: 100vh;
 }
 
 /* Typography */
 h1, h2, h3, h4 {
   line-height: 1.25;
-  font-weight: normal;
+  font-weight: 600;
   margin-bottom: 0.75rem;
+  font-family: 'Sofia Sans', sans-serif;
 }
 
 h1 { font-size: 2rem; }
@@ -74,6 +84,7 @@ blockquote {
   color: var(--muted);
   font-style: italic;
   margin: 1.5rem 0;
+  text-align: left;
 }
 
 /* Code */
@@ -92,6 +103,7 @@ pre {
   padding: 1.25rem;
   overflow-x: auto;
   margin-bottom: 1.25rem;
+  text-align: left;
 }
 
 pre code {
@@ -103,6 +115,8 @@ pre code {
 ul, ol {
   padding-left: 1.5rem;
   margin-bottom: 1.25rem;
+  text-align: left;
+  display: inline-block;
 }
 
 li { margin-bottom: 0.35rem; }
@@ -124,14 +138,14 @@ button, .btn {
   border: 1px solid var(--border);
   background: var(--surface);
   color: var(--text);
-  font-family: var(--font);
+  font-family: 'Sofia Sans', sans-serif;
   font-size: 0.95rem;
   cursor: pointer;
   transition: background 0.15s, border-color 0.15s;
 }
 
 button:hover, .btn:hover {
-  background: var(--bg);
+  background: var(--bg-from);
   border-color: var(--accent);
 }
 
@@ -154,7 +168,7 @@ input, textarea, select {
   border-radius: var(--radius);
   background: var(--surface);
   color: var(--text);
-  font-family: var(--font);
+  font-family: 'Sofia Sans', sans-serif;
   font-size: 1rem;
   margin-bottom: 1rem;
   transition: border-color 0.15s;
@@ -178,6 +192,7 @@ table {
   border-collapse: collapse;
   margin-bottom: 1.25rem;
   font-size: 0.95rem;
+  text-align: left;
 }
 
 th, td {
@@ -199,6 +214,7 @@ img {
   max-width: 100%;
   border-radius: var(--radius);
   display: block;
+  margin: 0 auto;
 }
 
 /* Utility */
